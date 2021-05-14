@@ -13,10 +13,15 @@ namespace VendorTracker.Models
     public Vendor(string name, string description)
     {
       Name = name;
-       _instances.Add(this);
+      _instances.Add(this);
       Description = description; 
       Id = _instances.Count; 
+    }
+      public static Vendor Find(int searchId)
+      {
+      
       }
+
       public static void ClearAll()
     {
       _instances.Clear();

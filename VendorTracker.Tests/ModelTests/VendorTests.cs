@@ -32,7 +32,7 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void GetVendorDescription_ReturnsVendorDescription_String()
     {
-      string description = "Sally's Diner: 24-hour comfort food";
+      string description = "24-hour comfort food";
       Vendor newVendor = new Vendor("Sally's Diner", description);
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
@@ -41,10 +41,24 @@ namespace VendorTracker.Tests
     public void GetId_ReturnsVendorId_Int()
     {
       string name = "Sally's Diner";
-      string description = "Sally's Diner: 24-hour comfort food";
+      string description = "24-hour comfort food";
       Vendor newVendor = new Vendor(name, description);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void FindId_FindVendorBasedOnId_Int()
+    {
+      string name01= "Sally's Diner";
+      string description01 = "24-hour Comfort Food";
+      string name02 = "The Coho Cafe";
+      string description02 = "An Old Time Alaskan Restaurant";
+      Vendor newVendor1 = new Vendor(name01, description01);
+      Vendor newVendor2 = new Vendor(name02, description02);
+
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
+
     }
 
   }

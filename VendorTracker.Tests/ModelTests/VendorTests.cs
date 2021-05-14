@@ -41,7 +41,8 @@ namespace VendorTracker.Tests
     public void GetId_ReturnsVendorId_Int()
     {
       string name = "Sally's Diner";
-      Vendor newVendor = new Vendor(name);
+      string description = "Sally's Diner: 24-hour comfort food";
+      Vendor newVendor = new Vendor(name, description);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }

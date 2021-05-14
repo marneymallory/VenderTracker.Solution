@@ -1,4 +1,4 @@
-# Vender Tracker
+# Vendor Tracker
 
 #### _Brief Project Description, 5/7/2021_
 

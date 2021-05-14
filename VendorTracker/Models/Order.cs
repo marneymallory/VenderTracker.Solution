@@ -4,6 +4,6 @@ namespace VendorTracker.Models
 {
   public class Order
   {
-    // Object Class Code
+    
   }
 }

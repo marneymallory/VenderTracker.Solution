@@ -8,7 +8,7 @@ namespace VendorTracker.Models
     public string Name { get; set; }
     public int Id { get; }
     public string Description { get; set; }
-
+  
 
     public Vendor(string name, string description)
     {
@@ -17,6 +17,10 @@ namespace VendorTracker.Models
       Description = description; 
       Id = _instances.Count; 
     }
+      public static List<Vendor> GetAll()
+      {
+
+      }
       public static Vendor Find(int searchId)
       {
         return _instances[searchId - 1];

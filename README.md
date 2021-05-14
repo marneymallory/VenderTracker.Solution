@@ -1,8 +1,8 @@
-# Project Name
+# Vender Tracker
 
 #### _Brief Project Description, 5/7/2021_
 
-#### By _**Tiffany Greathead**_
+#### By _**Marney Mallory**_
 
 ## Description
 
@@ -51,4 +51,4 @@ _Please reach out through my GitHub account._
 
 MIT License.
 
-Copyright (c) 2021 **_Tiffany Greathead_**
+Copyright (c) 2021 **_Marney Mallory_**

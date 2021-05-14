@@ -64,11 +64,13 @@ namespace VendorTracker.Tests
     public void GetAll_ReturnsAllVendorObjects_VendorList()
     {
     string name01 = "Sally's Diner";
+    string description01 = "24-hour Comfort Food";
     string name02 = "The Coho Cafe";
-    Vendor newVendor1 = new Vendor(name01);
-    Vendor newVendor2 = new Vendor(name02);
+    string description02 = "An Old Time Alaskan Restaurant";
+    Vendor newVendor1 = new Vendor(name01, description01);
+    Vendor newVendor2 = new Vendor(name02, description02);
     List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
-    List<Vendor> result = Category.GetAll();
+    List<Vendor> result = Vendor.GetAll();
     CollectionAssert.AreEqual(newList, result);
     }
   }

@@ -19,7 +19,7 @@ namespace VendorTracker.Models
     }
       public static List<Vendor> GetAll()
       {
-
+        return _instances;
       }
       public static Vendor Find(int searchId)
       {

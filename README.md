@@ -1,6 +1,6 @@
 # Vendor Tracker
 
-#### _Brief Project Description, 5/7/2021_
+#### _A MVC Application For Pierre's Bakery, 5/7/2021_
 
 #### By _**Marney Mallory**_
 

@@ -2,4 +2,13 @@
   Layout = "_Layout";
 }
 
-<h1>Show Indiviual Item Stuff Template Page</h1>
+<h1>Order Details: </h1>
+
+<h2>@Model["order"].Title</h2>
+<h3>@Model["order"].Description</h3>
+<h4>@Model["order"].Price</h4>
+<h5>@Model["order"].Date</h5>
+<h6>Vendor: @Model["vendor"].Name</h6>
+
+<a href='/vendors/@Model["vendor"].Id/orders/new'>Add Order</a>
+<a href='/vendors'>View All Vendors</a>

@@ -31,11 +31,18 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void GetOrderDescription_ReturnsOrderDescription_String()
     {
-      string description = "50 loavess of sourdough bread and 100 eclairs";
+      string description = "200 loaves of sourdough bread and 200 eclairs due by 8am";
       Order newOrder = new Order("Weekly Bread Order", description, 0, "test");
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
-      
+    }
+    [TestMethod]
+    public void GetOrderPrice_ReturnsOrderPrice_Int()
+    {
+      int price = 600.00
+      Order newOrder = new Order(title, description, 600.00, "test");
+      int result = newOrder.Price;
+      Assert.AreEqual(price, result);
     }
   }
 }

@@ -10,12 +10,7 @@ namespace VendorTracker.Controllers
     {
       return View();
     }
-    // for photos:
-    // [Route("/favorite_photos")]
-    // public ActionResult FavoritePhotos()
-    // {
-    //   return View();
-    // }
+    
 
   }
 }

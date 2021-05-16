@@ -31,7 +31,7 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void GetOrderDescription_ReturnsOrderDescription_String()
     {
-      string description = "200 loaves of sourdough bread and 200 eclairs due by 8am";
+      string description = "200 loaves of sourdough bread and 200 eclairs due by 6am";
       Order newOrder = new Order("Coho Cafe Order", description, 0, "test");
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
@@ -40,9 +40,17 @@ namespace VendorTracker.Tests
     public void GetOrderPrice_ReturnsOrderPrice_Int()
     {
       int price = 600;
-      Order newOrder = new Order("Coho Cafe Order", "200 loaves of sourdough bread and 200 eclairs due by 8am", 600, "test");
+      Order newOrder = new Order("Coho Cafe Order", "200 loaves of sourdough bread and 200 eclairs due by 6am", 600, "test");
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
+    }
+    [TestMethod]
+    public void GetOrderDate_ReturnsOrderDate_String()
+    {
+      string date = "5/17/21";
+      Order newOrder = new Order("Coho Cafe Order", "200 loaves of sourdough bread and 200 eclairs due by 6am", 600, "5/17/21");
+      string result = newOrder.Date;
+      Assert.AreEqual(date, result);
     }
   }
 }

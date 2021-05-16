@@ -52,5 +52,16 @@ namespace VendorTracker.Tests
       string result = newOrder.Date;
       Assert.AreEqual(date, result);
     }
+    [TestMethod]
+   public void GetId_ReturnsOrderId_Int()
+    {
+      string title = "Coho Cafe Order";
+      string description = "200 loaves of sourdough bread and 200 eclairs due by 6am";
+      int price = 600;
+      string date = "5/17/21";
+      Order newOrder = new Order(title, description, price, date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }

@@ -28,6 +28,14 @@ namespace VendorTracker.Tests
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
-
+    [TestMethod]
+    public void GetOrderDescription_ReturnsOrderDescription_String()
+    {
+      string description = "50 loavess of sourdough bread and 100 eclairs";
+      Order newOrder = new Order("Weekly Bread Order", description, 0, "test");
+      string result = newOrder.Description;
+      Assert.AreEqual(description, result);
+      
+    }
   }
 }

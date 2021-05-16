@@ -73,6 +73,20 @@ namespace VendorTracker.Tests
     List<Vendor> result = Vendor.GetAll();
     CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void AddOrder_ConnectsOrderToVendor_OrderList()
+    {
+      string title = "Coho Cafe Order";
+      string description = "200 loaves of sourdough bread and 200 eclairs due by 6am";
+      int price = 600;
+      string date = "5/17/21";
+      Order newOrder = new Order(title, description, price, date);
+      List<Order> newList = new List<Order> { newOrder };
+      Vendor newVendor = new Vendor("The Coho Cafe", "An Old Time Alaskan Restaurant");
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
 

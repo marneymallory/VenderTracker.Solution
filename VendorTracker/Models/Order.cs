@@ -4,6 +4,7 @@ namespace VendorTracker.Models
 {
   public class Order
   {
+    private static List<Order> _instances = new List<Order> {};
     public string Title { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
@@ -13,13 +14,15 @@ namespace VendorTracker.Models
     public Order(string title, string description, int price, string date)
     {
       Title = title;
+      _instances.Add(this);
       Description = description;
       Price = price;
       Date = date; 
+      Id = _instances.Count;
     }
     public static void ClearAll()
     {
-
+      _instances.Clear();
     }
   }
 }

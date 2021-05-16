@@ -23,7 +23,7 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void GetOrderTitle_ReturnsOrderTitle_String()
     {
-      string title = "Weekly Bread Order";
+      string title = "Coho Cafe Order";
       Order newOrder = new Order(title, "test", 0, "test");
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
@@ -32,15 +32,15 @@ namespace VendorTracker.Tests
     public void GetOrderDescription_ReturnsOrderDescription_String()
     {
       string description = "200 loaves of sourdough bread and 200 eclairs due by 8am";
-      Order newOrder = new Order("Weekly Bread Order", description, 0, "test");
+      Order newOrder = new Order("Coho Cafe Order", description, 0, "test");
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
     [TestMethod]
     public void GetOrderPrice_ReturnsOrderPrice_Int()
     {
-      int price = 600.00
-      Order newOrder = new Order(title, description, 600.00, "test");
+      int price = 600;
+      Order newOrder = new Order("Coho Cafe Order", "200 loaves of sourdough bread and 200 eclairs due by 8am", 600, "test");
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }

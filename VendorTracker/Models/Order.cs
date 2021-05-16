@@ -13,6 +13,7 @@ namespace VendorTracker.Models
     {
       Title = title;
       Description = description;
+      Price = price;
     }
     public static void ClearAll()
     {

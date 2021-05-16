@@ -20,6 +20,10 @@ namespace VendorTracker.Models
       Date = date; 
       Id = _instances.Count;
     }
+     public static Order Find(int searchId)
+      {
+        return _instances[searchId];
+      }
     public static void ClearAll()
     {
       _instances.Clear();

@@ -63,5 +63,24 @@ namespace VendorTracker.Tests
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+
+    public void FindId_FindVendorBasedOnId_Int()
+    {
+      string title01= "Coho Cafe Order";
+      string description01 = "200 loaves of sourdough bread and 200 eclairs due by 6am";
+      int price01 = 600;
+      string date01 = "5/17/21";
+      string title02 = "Sally's Diner Order";
+      string description02 = "250 loaves of french bread and 200 croissants due by 8am";
+      int price02 = 750;
+      string date02 = "5/18/21";
+      Order newOrder1 = new Order(title01, description01, price01, date01);
+      Order newOrder2 = new Order(title02, description02, price02, date02);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+
+    }
+
   }
 }
